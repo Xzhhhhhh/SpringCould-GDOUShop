@@ -38,8 +38,8 @@
 项目目前没有特别完善，里面有些常量还没替换好，还在用字面量。但是着重优化的下单逻辑我认为应该是生产可用的(在小程序上测试过基本没问题)，秒杀商品库存一样安安全全~支付和退款啥的都能到账。贴点截图吧~
 
 项目首页
-![fb7f8e6b3beaa3c9756daf40538537e](https://user-images.githubusercontent.com/91795546/226611625-4ed7a350-431c-453c-ab4b-2af38af13a59.jpg)
- 
+![Snipaste_2023-03-21_20-55-09](https://user-images.githubusercontent.com/91795546/226612234-d4d7b24d-88f5-4e5a-972b-14b497fae3c6.png)
+
  秒杀列表
  ![02a57895ca0a2f3d9606b9d55a7472c](https://user-images.githubusercontent.com/91795546/226609990-50d65942-86a7-4c57-a8e3-bef375f8528a.jpg)
 
