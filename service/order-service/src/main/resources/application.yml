@@ -1,0 +1,37 @@
+server:
+  port:
+
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  application:
+    name:
+
+  rabbitmq:
+    addresses:
+    username:
+    password:
+    #手动确认消息
+    listener:
+      simple:
+        acknowledge-mode: manual
+
+  redis:
+    host:
+    port:
+    database:
+    timeout:
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr:
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb_

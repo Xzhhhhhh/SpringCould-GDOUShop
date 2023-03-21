@@ -1,0 +1,37 @@
+server:
+  port:
+
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name:
+
+  application:
+    name: cart-service
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr:
+  rabbitmq:
+    addresses:
+    username:
+    password:
+    publisher-confirm-type: correlated
+    template:
+      mandatory: true
+
+  redis:
+    host:
+    port:
+    database:
+    timeout:
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb_
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

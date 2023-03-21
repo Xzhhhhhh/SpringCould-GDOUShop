@@ -1,0 +1,28 @@
+server:
+  port:
+
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  application:
+    name:
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr:
+
+  redis:
+    host:
+    port:
+    database:
+    timeout:
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb_

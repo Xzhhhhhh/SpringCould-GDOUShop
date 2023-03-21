@@ -1,0 +1,57 @@
+server:
+  port:
+
+spring:
+  application:
+    name: user-gateway
+
+  redis:
+    host: mail-redis
+    port:
+    database:
+    timeout:
+
+  #nacos地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr:
+
+
+    gateway:
+      routes:
+        - id: user-service #路由标识 必须唯一
+          uri: lb://user-service # 路由的目标地址
+          predicates: #判断是否符合规则
+            - Path=/user/** #路径断言 判断路径是否以/user开头
+
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/order/**
+
+        - id: goods-service
+          uri: lb://goods-service
+          predicates:
+            - Path=/goods/**
+
+        - id: cart-service
+          uri: lb://cart-service
+          predicates:
+            - Path=/cart/**
+
+      globalcors: # 全局的跨域处理
+        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: # 允许哪些网站的跨域请求
+
+            allowedMethods: # 允许的跨域ajax的请求方式
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            allowedHeaders: "*" # 允许在请求中携带的头信息
+            allowCredentials: true # 是否允许携带cookie
+            maxAge: 360000 # 这次跨域检测的有效期

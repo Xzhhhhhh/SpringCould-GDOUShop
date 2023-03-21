@@ -1,0 +1,31 @@
+server:
+  port:
+
+spring:
+  application:
+    name:
+
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr:
+  redis:
+    host:
+    port:
+    database:
+    timeout:
+
+mybatis-plus:
+  mapper-locations: classpath:com/gdou/manager/mapper/xml/*.xml
+  global-config:
+    db-config:
+      table-prefix: tb_
+
+  #  configuration:
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
